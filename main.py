@@ -85,7 +85,6 @@ def soru_3():
 
 
 ### Soru 4- Hangi ürünler en çok beraber satılmış?
-# Referance Keith Gelli
 def soru_4():
     soru_4 = hepsi[hepsi['Order ID'].duplicated(keep=False)]
     soru_4['Grup Hali'] = soru_4.groupby('Order ID')['Product'].transform(lambda x: ','.join(x))
